@@ -46,32 +46,32 @@
         
             <div class="col-sm-6">
               <label for="firstName" class="form-label">Prénom</label>
-              <input type="text" class="form-control needs-validation" id="firstName" name="firstName" placeholder="François" required>
+              <input type="text" class="form-control needs-validation" id="firstName" name="firstName" placeholder="François" pattern="^[A-Z]{1}[a-zéèï'-]{1,}$" required>
             </div>
 
             <div class="col-sm-6">
               <label for="lastName" class="form-label">Nom</label>
-              <input type="text" class="form-control needs-validation" id="lastName" name="lastName" placeholder="Dupont" required>
+              <input type="text" class="form-control needs-validation" id="lastName" name="lastName" placeholder="Dupont" pattern ="^[A-Z]{1}[a-zéèï'\s-]{1,}$" required>
             </div>
 
             
             <div class="col-12">
               <label for="address" class="form-label">Adresse</label>
-              <input type="text" class="form-control needs-validation" name="address" id="address" placeholder="12 rue du Pont" required>
+              <input type="text" class="form-control needs-validation" name="address" id="address" placeholder="12 rue du Pont" pattern ="^[\d]+\s[A-Za-zéèïî'\s-]{2,}$" required>
             </div>
             
             <div class="col-md-3">
               <label for="city" class="form-label">Ville</label>
-              <input type="text" class="form-control needs-validation" name="city" id="city" placeholder="Paris" required>
+              <input type="text" class="form-control needs-validation" name="city" id="city" placeholder="Paris" pattern ="^[A-Z]{1}[a-zéèïî'\s-]{2,}$" required>
             </div>
             
             <div class="col-12">
               <label for="email" class="form-label">Email</label>
-              <input type="email" name="mail" class="form-control needs-validation" id="email" placeholder="you@example.com" required>
+              <input type="email" name="mail" class="form-control needs-validation" id="email" placeholder="you@example.com" pattern="\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b" required>
             </div>
             <hr class="my-4">
 
-          <button class="w-100 btn btn-primary btn-lg" type="submit" id="bim">Finalisez vos achats</button>
+          <button class="w-100 btn btn-secondary btn-lg" type="submit" id="bim">Finalisez vos achats</button>
         </form>
       </div>
     </div>
