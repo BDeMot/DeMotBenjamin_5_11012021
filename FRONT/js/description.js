@@ -2,7 +2,7 @@
 let idForDesc = localStorage.getItem('idProduct');
     
 
-ajax("http://localhost:3000/api/cameras/" + idForDesc)
+get("http://localhost:3000/api/cameras/" + idForDesc)
 .then((response) =>{
     
         let cam = response;

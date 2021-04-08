@@ -18,10 +18,10 @@ xhr.onreadystatechange = function() {
 
 
 
-ajax('http://localhost:3000/api/cameras')
+get('http://localhost:3000/api/cameras')
     .then((response) =>{
     
-        for (let i = 0; i < response.length; i++){
+        for (let i = 0, nb = response.length; i < nb; i++){
             const linkToDesc = document.createElement('a');
             const divCard = document.createElement('div');
             const divBody = document.createElement('div');
@@ -31,8 +31,8 @@ ajax('http://localhost:3000/api/cameras')
             let img = new Image(300, 220);
             img.src = response[i].imageUrl;
             
-            linkToDesc.classList.add('col-12');
-            linkToDesc.classList.add('col-lg-4');
+            linkToDesc.classList.add('col-12', 'col-lg-4');
+
             divCard.classList.add('card');
             divBody.classList.add('card-body');
             cardH5.classList.add('card-title');
@@ -57,11 +57,9 @@ ajax('http://localhost:3000/api/cameras')
         };
     })
     .catch((err) =>{
-        const divAlert = document.createElement('div');
+        let divAlert = document.createElement('div');
     
-        divAlert.classList.add('alert');
-        divAlert.classList.add('alert-danger');
-        divAlert.classList.add('col-12');
+        divAlert.classList.add('alert', 'alert-danger', 'col-12');
     
         divAlert.textContent = err;
     

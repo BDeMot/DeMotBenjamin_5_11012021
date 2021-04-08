@@ -5,8 +5,8 @@ var totalPrice = 0;
 window.onload = sendToXhr();
 
 function sendToXhr (){
-    for (let i = 0; i<buyingList.length; i++){ 
-        ajax('http://localhost:3000/api/cameras/' + buyingList[i])
+    for (let i = 0, nb = buyingList.length; i<nb; i++){ 
+        get('http://localhost:3000/api/cameras/' + buyingList[i])
         .then((response)=>{
             let liItem = document.createElement('li');
             let divItem = document.createElement('div');
