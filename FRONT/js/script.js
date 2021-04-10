@@ -31,7 +31,7 @@ get('http://localhost:3000/api/cameras')
             let img = new Image(300, 220);
             img.src = response[i].imageUrl;
             
-            linkToDesc.classList.add('col-12', 'col-lg-4');
+            linkToDesc.classList.add('col-12', 'col-lg-4', 'mt-4');
 
             divCard.classList.add('card');
             divBody.classList.add('card-body');

@@ -1,4 +1,4 @@
-/*jshint esversion: 6 */ 
+/*jshint esversion: 6 */
 
 function sendData() {
 	const XHR = new XMLHttpRequest();
@@ -45,3 +45,41 @@ function sendData() {
 	  	sendData();	
 	} );
 
+
+// form validater
+const input = document.getElementsByTagName('input');
+
+for (i = 0; i<input.length; i++){
+	input[i].addEventListener('input', function (e){
+		 
+		e.target.classList.add('needs-validation');
+		
+		if (e.target.validity.valid) {
+			e.target.classList.replace('needs-validation', 'validated')
+		}
+		else {
+			e.target.classList.replace('validated', 'needs-validation')
+		}
+
+
+		let areAllValid = 0;
+		
+		for (j = 0; j<input.length; j++){
+			if (input[j].validity.valid === true){
+				areAllValid++
+		
+			} else {
+				areAllValid--
+			}
+		}
+
+		if (areAllValid == input.length){
+			
+			document.getElementById('bim').removeAttribute('disabled')
+		} else {
+			document.getElementById('bim').setAttribute('disabled', 'disabled')
+		}
+
+		
+	})	
+}

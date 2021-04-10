@@ -8,7 +8,7 @@ get("http://localhost:3000/api/cameras/" + idForDesc)
         let cam = response;
         let options = cam.lenses;
         let image = new Image(350, 270);
-        image.classList.add('img-fluid');
+        image.classList.add('img');
         image.src = cam.imageUrl;
     
         for (let i = 0; i<options.length; i++){
