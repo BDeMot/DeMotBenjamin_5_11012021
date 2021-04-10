@@ -1,0 +1,13 @@
+.card-img-top{
+    object-fit: cover;
+   }
+
+#parent > a{
+    transition: transform 300ms ease;
+    text-decoration: none;
+    color: black;
+}
+
+#parent > a:hover{
+    transform: scale(1.05);
+}

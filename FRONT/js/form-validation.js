@@ -25,6 +25,7 @@ function sendData() {
 		sessionStorage.setItem('confirmation', response);
 		window.location.assign('./confirmation.html')
 	})
+	.then(localStorage.clear())
 	.catch((err) =>{
 		let divAlert = document.createElement('div');
     
@@ -34,7 +35,7 @@ function sendData() {
     
         document.getElementById('parent').appendChild(divAlert);
 	}) 
-	}
+}
   
 
 	const form = document.getElementById( 'form' );  
