@@ -1,22 +1,4 @@
 /*jshint esversion: 6 */ 
-/*let xhr = new XMLHttpRequest();
-xhr.open("GET", "http://localhost:3000/api/cameras");
-xhr.responseType = "json";
-xhr.send();
-
-xhr.onreadystatechange = function() {
-    if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
-        const cameras = xhr.response;
-        createCard(cameras);
-    } else if (this.status != 200) {
-     createAlert();
-    }
-};
-*/
-
-/****************************/
-
-
 
 get('http://localhost:3000/api/cameras')
     .then((response) =>{
