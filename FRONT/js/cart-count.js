@@ -1,30 +1,22 @@
-/*jshint esversion: 6 */ 
-window.onload = howManyInCart()
+export function howManyInCart () {
+  const get = localStorage.getItem('buyingList')
+  if (get === null) {
+    localStorage.setItem('buyingList', '')
+  }
 
-
-function howManyInCart(){
-	let get = localStorage.getItem('buyingList');
-	if(get === null){
-		localStorage.setItem('buyingList', '')
-	} 
-	
-  	document.getElementById('cart').textContent = getAndSplit().length;
+  	document.getElementById('cart').textContent = getAndSplit().length
 }
 
+export function getAndSplit () {
+  const get = localStorage.getItem('buyingList')
 
-function getAndSplit(){
-	let get = localStorage.getItem('buyingList');
+  const itemsArray = get.split(',')
 
-    let itemsArray = get.split(',');
-
-    	for (let i = 0; i < itemsArray.length; i++){
-      		if (itemsArray[i] === ''){
-        		itemsArray.splice(i, 1);
+    	for (let i = 0; i < itemsArray.length; i++) {
+      		if (itemsArray[i] === '') {
+        		itemsArray.splice(i, 1)
       		}
     	}
-   
-	return itemsArray;
+
+  return itemsArray
 }
-
-
-

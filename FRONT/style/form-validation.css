@@ -22,6 +22,16 @@
   border-color: black;
 }
 
+input ~ span{
+  visibility: hidden;
+}
+
+input:invalid ~ span{
+  visibility: visible;
+  color: red;
+  font-size: 13px;
+}
+
 /*
 @keyframes shake {
   0%{
