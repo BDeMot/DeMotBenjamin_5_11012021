@@ -4,7 +4,7 @@ export function get (url) {
     xhr.open('GET', url)
     xhr.responseType = 'json'
     xhr.onload = () => resolve(xhr.response)
-    xhr.onerror = () => reject('Request status' + xhr.status + ' : Une erreur est survenue !')
+    xhr.onerror = () => reject('Request status :' + xhr.status + ' : Une erreur est survenue !')
     xhr.send()
   })
 }

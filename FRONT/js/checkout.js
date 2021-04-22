@@ -82,13 +82,13 @@ function sendData () {
   const FD = new FormData(form)
 
   // crée un objet 'contact' et récupère les valeurs entrées dans <form> via leurs keys de l'objet FormData
-  	const contact = {
-		  firstName: FD.get('firstName'),
-		  lastName: FD.get('lastName'),
-		  address: FD.get('address'),
-		  city: FD.get('city'),
-		  email: FD.get('mail')
-	  }
+  const contact = {
+		firstName: FD.get('firstName'),
+		lastName: FD.get('lastName'),
+		address: FD.get('address'),
+		city: FD.get('city'),
+		email: FD.get('mail')
+	}
 
   const req = { contact, products }
 
@@ -113,7 +113,7 @@ const form = document.getElementById('form')
 
 form.addEventListener('submit', function (e) {
   e.preventDefault()
-	  	sendData()
+	sendData()
 })
 
 // form validater

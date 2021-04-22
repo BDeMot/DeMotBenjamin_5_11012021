@@ -3,6 +3,8 @@ import { howManyInCart, getAndSplit } from './cart-count.js'
 
 const idForDesc = localStorage.getItem('idProduct')
 
+window.onload = howManyInCart;
+
 get('http://localhost:3000/api/cameras/' + idForDesc)
   .then((response) => {
     const cam = response
