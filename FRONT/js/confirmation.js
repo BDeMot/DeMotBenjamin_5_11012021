@@ -1,3 +1,4 @@
+// gère tout le contenu de la page HTML
 (() => {
   const order = JSON.parse(sessionStorage.getItem('confirmation'))
 

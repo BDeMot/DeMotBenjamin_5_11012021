@@ -5,6 +5,8 @@ const idForDesc = localStorage.getItem('idProduct')
 
 window.onload = howManyInCart;
 
+// l'id de l'objet, stocké sur localStorage, est envoyée à l'API
+//qui enverra ensuite l'id à la BDD
 get('http://localhost:3000/api/cameras/' + idForDesc)
   .then((response) => {
     const cam = response
@@ -27,6 +29,10 @@ get('http://localhost:3000/api/cameras/' + idForDesc)
 
     const addButton = document.getElementById('addToCart')
 
+// pour mettre à jour la liste des objets ajoutés au panier, 
+// l'id de l'objet est mise dans un tableau, le panier est
+// récupéré via getandSplit() sous forme de tableau.
+// Les deux tableaux sont regroupés et stocker enfin sur LocalStorage
     addButton.addEventListener('click', function () {
       const addToCart = []
       addToCart.push(idForDesc)
