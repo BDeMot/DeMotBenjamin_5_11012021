@@ -10,8 +10,8 @@ export function howManyInCart () {
   document.getElementById('cart').textContent = getAndSplit().length
 }
 
-//Quand cette fonction est appelée, elle récupère le panier stockée sur LocalStorage,
-//la découpe proprement en tableau,  et le retourne.
+// Quand cette fonction est appelée, elle récupère le panier stockée sur LocalStorage,
+// la découpe proprement en tableau,  et le retourne.
 export function getAndSplit () {
   const get = localStorage.getItem('buyingList')
 

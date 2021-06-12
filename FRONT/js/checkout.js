@@ -5,6 +5,7 @@ const buyingList = getAndSplit()
 let totalPrice = 0
 
 window.onload = sendToXhr()
+howManyInCart(buyingList.length)
 
 // Chaque entrée du tableau contenu dans buyingList est envoyée vers l'API
 // et avec la réponse, on construit la liste des objets du panier.
